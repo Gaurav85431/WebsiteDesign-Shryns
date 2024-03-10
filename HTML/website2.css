@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: #82616d;
+  display: flex;
+
+  /* make position relative taki item i.e. nav bar ko move kar ske */
+  position: relative;
+}
+
+.mtext {
+  /* background-color: red; */
+  /*width: 1300px; /*the greek escape ko 1 line me likhne ka 1st way*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1000;
+}
+
+.mtext h1 {
+  white-space: nowrap; /*the greek escape ko 1 line me likhne ka 2nd way*/
+
+  user-select: none; /* text ko user seelct nhi kar skata */
+
+  font-size: 9vw;
+  color: #ffff;
+  font-family: cursive;
+  font-weight: 100;
+}
+
+.mtext h3 {
+  white-space: nowrap; /*the greek escape ko 1 line me likhne ka 2nd way*/
+
+  user-select: none; /* text ko user seelct nhi kar skata */
+
+  font-size: 5vw;
+  color: #ffff;
+  font-family: cursive;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.left {
+  width: 45%;
+  height: 100%;
+  /* background-color: red; */
+
+  /* position tki image center kr ske */
+  position: relative;
+
+  overflow: hidden;
+}
+
+.center {
+  position: relative;
+
+  width: 45%;
+  height: 100%;
+  /* background-color: green; */
+  background-image: url(https://plus.unsplash.com/premium_photo-1673792686302-7555a74de717?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
+
+.center .card {
+  position: absolute; /*center k under rkhna hia to center  ka position relative aur card ko absolute*/
+  width: 200px;
+  height: 140px;
+  bottom: 10%;
+  right: -8%;
+  background-color: red;
+  display: flex; /*tki cicon aur cimage aaye.*/
+
+  z-index: 999;
+}
+
+.cicons {
+  width: 20%;
+  height: 100%;
+  /* background-color: #fff; */
+  background-image: url(https://images.unsplash.com/photo-1709582033812-8724ac524373?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+
+  /* arrow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cimage {
+  width: 80%;
+  height: 100%;
+  /* background-color: yellow; */
+  background-image: url(https://images.unsplash.com/photo-1657791182990-1967bad62e63?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.right {
+  width: 10%;
+  height: 100%;
+  background-color: #82676d;
+}
+.center-image {
+  width: 45%;
+  height: 60%;
+  /* background-color: yellow; */
+  background-image: url(https://media.istockphoto.com/id/1305355586/photo/beauty-portrait-of-attractive-young-woman-with-natural-makeup-and-perfect-smooth-skin-on.jpg?s=2048x2048&w=is&k=20&c=m6vw1IUfpO3-K2eND84oQBNQTqU2Mfc9MqBgKXKFEKQ=);
+
+  background-size: cover;
+  background-position: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav {
+  /* background-color: red; */
+  display: flex;
+  width: 100%;
+  padding: 30px 50px;
+  gap: 100px;
+  color: white;
+
+  letter-spacing: 4px;
+  /* border: 2px solid red; */
+
+  position: absolute;
+  /* top: 10%; */
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 10px;
+  letter-spacing: 4px;
+}
+
+.text {
+  position: absolute;
+  /* bottom: 0; */
+  bottom: -20%;
+  width: 100%;
+  height: 60px;
+  /* background-color: red; */
+  /* border: 2px solid red; */
+
+  display: flex; /* taki parts and uska text show ho.*/
+}
+
+.text .parts {
+  width: 30%;
+  /* height: 20px; */
+
+  /* background-color: yellow; */
+}
+
+.text .parts p {
+  padding-top: 4px;
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.text .para {
+  width: 70%;
+  /* height: 20px; */
+  /* background-color: red; */
+}
+
+.text .para p {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  bottom: -20px;
+
+  /* Rotate from initaial point not from origin  */
+  /* transform: rotate(10deg); */
+
+  /* origin change karne k liye always height ko 50% dena hai taki hm change ker ske origin ko  */
+  transform-origin: 0% 50%; /* w=0   h=50%    */
+
+  transform: rotate(-90deg);
+  gap: 20px;
+  left: 10%;
+  /* jo part bahar nikala usko hata denge. see .left me overflow */
+}
+
+.scroll .line {
+  width: 150px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.scroll h4 {
+  letter-spacing: 10px;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.relem {
+  padding: 10px 0;
+  height: 70%;
+  width: 100%;
+  background-color: #82616d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  color: white; /* taki <a> ka color white me ho jaye*/
+}
+
+.relem i {
+  font-size: 25px;
+}
+
+.relem .rlinks {
+  display: flex;
+  transform: translateY(-150px) rotate(90deg); /* translateY=-150px krenge to upper jayega y direction me */
+  gap: 30px;
+}
+
+.rlinks a {
+  color: #fff;
+  text-decoration: none;
+
+  font-weight: 400;
+  font-size: 12px;
+}

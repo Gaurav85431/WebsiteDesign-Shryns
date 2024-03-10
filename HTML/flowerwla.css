@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  /* height: 700px; */
+  height: 100%; /* html , body ka height 100% de ddiya hia*/
+  background-color: red;
+}
+
+.left {
+  width: 70%;
+  height: 100%;
+  background-color: blue;
+}
+.ltop {
+  width: 100%;
+  height: 70%;
+  background-image: url("https://i.pinimg.com/originals/32/f8/c3/32f8c3e9a2a43be485a42cca3f6626f3.jpg");
+  background-image: url(https://th.bing.com/th/id/OIP.uAqFbRMlDqMIZKnYeOIqXgHaEK?rs=1&pid=ImgDetMain);
+  background-image: url(https://avatars.githubusercontent.com/u/145956263?v=4?s=400);
+  /* background-color: yellow; */
+  background-size: contain;
+}
+
+.lbottom {
+  width: 100%;
+  height: 30%;
+  /* background-image: url(https://pin.it/564J1w9MH) */
+  background-color: rgb(0, 0, 0);
+
+  /*  */
+  padding: 70px 140px;
+
+  /*for side by side divide content */
+  display: flex;
+  justify-content: space-around;
+}
+.lbottom,
+h1 {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* ******** */
+
+.right {
+  width: 30%;
+  height: 100%;
+  background-color: rgb(206, 225, 206);
+}
+.rtop {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  /* background-image: url(https://pin.it/564J1w9MH) */
+  /* background-color: rgb(11, 134, 182); */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.rtop a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  /* font-family: "Montserrat"; */
+  margin-bottom: 20px; /* ydi padding dete to wo internal border ho jata, margin diyen */
+}
+
+/* 
+/* track 2nd a ==******* agar line me top to  bottom multiple hai either a or i or other uska 2nd child */ /*
+.rtop a:nth-child(2) {
+  /* color: blue; */ /* for check only */ /*
+  color: red;
+}
+/* 2nd a i.e. me - symobol use */ /*
+.rtop a:nth-child(2)::before {
+  content: "-";
+  /* before / after me content dena jaruri hai content may  be empty */ /*
+} */
+
+/* apply - using css */
+.rtop #selected {
+  position: relative;
+  margin-left: 30px; /*l se 30px*/
+}
+.rtop #selected::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  position: absolute; /* ye piche hai, to see this make it absolute */
+  left: -21px; /*l se 10px*/
+  top: 10px;
+}
+
+/* icons */
+.icon {
+  right: 0;
+  top: 0;
+  position: absolute;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon i {
+  font-size: 20px;
+}
+
+.bottomflower {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 150px;
+  width: 100px;
+  /* background-color: red; */
+  background-image: url(https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+/*
+.bottomflower i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+}
+*/
+.bottomflower i {
+  color: rgb(239, 237, 237);
+  background-color: #000;
+  opacity: 0.7;
+  font-size: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 49%;
+  left: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+
+.rbottom {
+  width: 100%;
+  height: 30%;
+  /* background-image: url(https://pin.it/564J1w9MH) */
+  background-color: rgb(151, 93, 12);
+}
